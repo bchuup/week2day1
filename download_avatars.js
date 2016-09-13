@@ -1,12 +1,8 @@
-
-
+var key = require('dotenv').config()
 var request = require("request")
 var fs = require("fs")
-var key = require("./token.js");
 
-token = key.token
-
-// console.log(token)
+token = process.env.token
 
 
 // function to create object necessary for authentication
@@ -29,7 +25,7 @@ function downloadImageByURL(url, path, callback) {
 }
 
 // print urls
-function manyPrints(err, urls){
+function manyPrints(err, urls){ //urls is an array of urls
   if (err) {
     throw err;
   }
