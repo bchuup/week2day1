@@ -1,6 +1,6 @@
 var request = require("request");
 
-var site = "https://www.google.ca/"
+var site = "https://google.com"
 
 function printExampleHTML(website) {
   request(website, function(err, response, body) {
